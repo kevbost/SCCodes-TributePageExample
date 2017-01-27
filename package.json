@@ -1,0 +1,32 @@
+{
+  "name": "SCCodes-Tribute-Project",
+  "version": "1.0.0",
+  "description": "Example FreeCodeCamp project for [SCCodes](https://sccodes.org/ \"South Carolina Codes\") mentorship program.",
+  "main": "index.js",
+  "scripts": {
+    "autoprefixer": "postcss -u autoprefixer -r dist/styles/*",
+    "movefiles": "cp -R app/ dist/",
+    "minifyhtml": "htmlmin -o dist/index.html app/index.html",
+    "minifycss": "minify --output dist/styles/main.css app/styles/main.css",
+    "minify": "npm run minifyhtml && npm run minifycss",
+    "build": "rm -rf dist && npm run movefiles && npm run autoprefixer && npm run minify",
+    "deploy": "git add dist && git commit -m 'update gh-pages' && git subtree push --prefix dist origin gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevbost/SCCodes-TributePageExample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevbost/SCCodes-TributePageExample/issues"
+  },
+  "homepage": "https://github.com/kevbost/SCCodes-TributePageExample#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.0",
+    "html-minifier-cli": "^0.1.0",
+    "minifier": "^0.8.0",
+    "postcss-cli": "^2.6.0"
+  }
+}
