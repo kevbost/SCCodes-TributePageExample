@@ -4,11 +4,12 @@ Example FreeCodeCamp project for [SCCodes](https://sccodes.org/ "South Carolina 
 
 ### Running Locally
 ```
-npm install
-npm run build
+cd app
+python -m SimpleHTTPServer 8000
 ```
 
-### Running SimpleHTTPServer
+### Building dist/
 ```
-python -m SimpleHTTPServer 8000
+npm install
+npm run build
 ```
